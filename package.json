@@ -10,8 +10,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -31,7 +31,7 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://github.com/V-573/RenderYComposicionTodoMachin",
+  "homepage": "https://v-573.github.io/RenderYComposicionTodoMachin/",
   "devDependencies": {
     "gh-pages": "^6.1.1"
   }
