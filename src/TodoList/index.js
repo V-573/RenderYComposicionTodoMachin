@@ -1,6 +1,7 @@
 import './TodoList.css';
 
 function TodoList(props) {
+  const renderFunc = props.children || props.render;
   return (
 
 
@@ -9,14 +10,16 @@ function TodoList(props) {
       {props.loading && props.onLoading()}
 
 
-      {(!props.loading && !props.searchedTodos.length) && props.onEmptyTodos()}
+      {(!props.loading && !props.totalTodos) && props.onEmptyTodos()}
 
-      {props.searchedTodos.map(props.render)}
+      {(!!props.totalTodos && !props.searchedTodos.length) && props.onEmptySearchResults(props.searchText)}
+
+      {(!props.loading && !props.error) && props.searchedTodos.map(renderFunc)}
 
 
-<ul >
-      {props.children}
-    </ul>
+{/* <ul >
+      {renderFunc}
+    </ul> */}
 
 
     </section>
