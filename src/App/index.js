@@ -16,20 +16,47 @@ import { ChangeStorage} from "../ChangeStorage";
 
 function App() {
   const {
+    // //ESTADOS
+    // loading,
+    // error,
+    // searchedTodos,
+    // totalTodos,
+    // completeTodo,
+    // openModal,
+    // completedTodos,
+    // searchValue,
+    
+    
+    // //ACTUALIZADORES DEL ESTADO
+    // setOpenModal,
+    // addTodo,
+    // deleteTodo,
+    // setSearchValue,
+    // sincronizeTodos,
+
+    states, stateUpdaters,
+  } = useTodos();
+
+
+  const {
     loading,
     error,
-    searchedTodos,
-    completeTodo,
-    deleteTodo,
-    openModal,
     completedTodos,
     totalTodos,
     searchValue,
-    setSearchValue,
+    searchedTodos,
+    openModal,
+  } = states; 
+
+
+  const {
+ setSearchValue,
     addTodo,
+    completeTodo,
+    deleteTodo,
     setOpenModal,
     sincronizeTodos,
-  } = useTodos();
+  }= stateUpdaters
 
   return (
     <>
